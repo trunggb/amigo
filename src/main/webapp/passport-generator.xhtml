@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<title>Smart Warehouse</title>
+	<h:outputStylesheet library="css" name="style.css"></h:outputStylesheet>
+	<h:outputStylesheet library="css" name="jquery.toast.css"></h:outputStylesheet>
+	<h:outputStylesheet name="components.css" library="primefaces" />
+</h:head>
+<h:body>
+
+	<h:form>
+
+		<div class="passport-gen-container space-around">
+			<div class="ui-g">
+				<div class="ui-g-12 center-text">
+					<h:outputText class="big-title" value="PASSPORT" />
+					<h:outputText class="smal-title" value="generator" />
+				</div>
+			</div>
+			<div class="ui-g">
+				<div class="ui-g-3">
+					<p:outputLabel value="full name" />
+				</div>
+				<div class="ui-g-9 width-100">
+					<p:inputText value="#{passportAddBean.passport.fullName}"/>
+				</div>
+			</div>
+			<div class="ui-g">
+				<div class="ui-g-3">
+					<p:outputLabel value="address" />
+				</div>
+				<div class="ui-g-9 width-100">
+					<p:inputText value="#{passportAddBean.passport.address}"/>
+				</div>
+			</div>
+			<div class="ui-g">
+				<div class="ui-g-3">
+					<p:outputLabel value="gender" />
+				</div>
+				<div class="ui-g-9 width-100">
+					<p:selectOneRadio unselectable="true" value="#{passportAddBean.passport.gender}">
+						<f:selectItem itemLabel="Male" itemValue="Male" />
+						<f:selectItem itemLabel="Female" itemValue="Female" />
+					</p:selectOneRadio>
+				</div>
+			</div>
+			<div class="ui-g">
+				<div class="ui-g-3">
+					<p:outputLabel value="ID" />
+				</div>
+				<div class="ui-g-9 width-100">
+					<p:inputText value="#{passportAddBean.passport.idenNum}" />
+				</div>
+			</div>
+			<div class="ui-g">
+				<div class="ui-g-3">
+					<p:outputLabel value="phone" />
+				</div>
+				<div class="ui-g-9 width-100">
+					<p:inputText value="#{passportAddBean.passport.phone}"/>
+				</div>
+			</div>
+			<div class="ui-g">
+				<div class="ui-g-3">
+					<p:outputLabel value="email" />
+				</div>
+				<div class="ui-g-9 width-100">
+					<p:inputText value="#{passportAddBean.passport.email}"/>
+				</div>
+			</div>
+			<div class="ui-g center-but">
+				<h:commandButton value="Submit" action="#{passportAddBean.onclickSubmitButton}"/>
+			</div>
+		</div>
+	</h:form>
+	<p:growl id="growl" showDetail="true" sticky="true" />
+	<h:outputScript library="js" name="script.js"></h:outputScript>
+	<h:outputScript library="js" name="jquery.toast.js"></h:outputScript>
+</h:body>
+</html>

@@ -25,11 +25,6 @@ public class LoginBean implements Serializable{
 	 * 		wazVPz
 	 */
 	
-	
-	@ManagedProperty(value = "#{userBean}")
-	@Setter
-	private UserBean userBean;
-	
 	private static final long serialVersionUID = 6445092217844175676L;
 
 	@Getter
@@ -40,17 +35,9 @@ public class LoginBean implements Serializable{
 	@Setter
 	private String passWord;
 	
-	@EJB
-	UserService userService;
-	
 	public void onClickLoginButton() {
+		System.out.println("Hello");
 		
-		String encrypted = EncryptionService.encrypt(passWord);
-		Optional<User> user = userService.checkValidUser(userName, encrypted);
-		if(user.isPresent()) {
-			this.userBean.setLoginUser(user.get());
-			PrimeFaces.current().executeScript("top.redirectTo('product.xhtml')");
-		}
 	}
 	
 }

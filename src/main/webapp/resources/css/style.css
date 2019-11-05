@@ -32,6 +32,7 @@
 	background-color: #06305fcc;
 }
 
+
 .big-title {
 	font-size: 60px;
 	font-weight: 800;
@@ -93,8 +94,7 @@
 }
 
 .center-but {
-	display: flex;
-	justify-content: center;
+	margin: 0 auto;
 }
 
 body {
@@ -124,6 +124,10 @@ body {
 .width-100 input{
 	width: 100%;
 }
+
+.width-100 table{
+	width: 100%;
+}
 .width-69 input{
 	width: 69%;
 }
@@ -140,4 +144,18 @@ body {
 
 .center-text{
 	text-align: center;
+}
+
+
+.passport-gen-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	border: none;
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: #f1f0eb;
+    height: 100vh;
+    padding-left: 100px !important;
+    padding-right: 100px !important;
 }

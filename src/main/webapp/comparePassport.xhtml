@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>View product</title>
+	<h:outputScript name="jquery/jquery-plugins.js" library="primefaces" />
+	<h:outputStylesheet name="grid/grid.css" library="primefaces" />
+	<h:outputStylesheet name="components.css" library="primefaces" />
+</h:head>
+
+<h:body>
+	<div class="ui-g">
+		<div class="ui-g-2"></div>
+		<div class="ui-g-5">
+			<p:outputLabel value="Passport information" />
+		</div>
+		<div class="ui-g-5">
+			<p:outputLabel value="Resident information" />
+		</div>
+	</div>
+
+	<div class="ui-g">
+		<div class="ui-g-2">
+			<p:outputLabel value="full name" />
+		</div>
+		<div class="ui-g-5">
+			<p:outputLabel value="#{passportCompareBean.passport.fullName}" />
+		</div>
+		<div class="ui-g-5">
+			<p:outputLabel value="Resident information" />
+		</div>
+	</div>
+</h:body>
+
+</html>

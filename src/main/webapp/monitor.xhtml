@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<title>Smart Warehouse</title>
+	<h:outputStylesheet library="css" name="style.css"></h:outputStylesheet>
+	<h:outputStylesheet library="css" name="jquery.toast.css"></h:outputStylesheet>
+	<h:outputStylesheet name="components.css" library="primefaces" />
+</h:head>
+<h:body>
+
+	<h:form>
+
+		<div class="passport-gen-container space-around">
+			<div class="ui-g">
+				<div class="ui-g-12 center-text">
+					<h:outputText class="big-title" value="Monitor" />
+				</div>
+			</div>
+			<div>
+				<p:dataTable reflow="true" rows="10" paginatorPosition="bottom"
+					paginator="true" rowsPerPageTemplate="5,10,15"
+					paginatorTemplate="{FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}">
+					<p:column>
+						<f:facet name="header">Passport</f:facet>
+						<h:outputText value="Trung B" />
+					</p:column>
+					<p:column>
+						<f:facet name="header">State</f:facet>
+						<h:outputText value="Authentication" />
+					</p:column>
+				</p:dataTable>
+			</div>
+		</div>
+	</h:form>
+	<p:growl id="growl" showDetail="true" sticky="true" />
+	<h:outputScript library="js" name="script.js"></h:outputScript>
+	<h:outputScript library="js" name="jquery.toast.js"></h:outputScript>
+</h:body>
+</html>
