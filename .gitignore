@@ -1,0 +1,8 @@
+/target/
+.DS_Store
+.classpath
+.idea/
+.metadata/
+.project
+.settings/
+READ ME.txt
